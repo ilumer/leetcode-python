@@ -1,6 +1,8 @@
 # coding:utf-8
 
 # https://leetcode.com/problems/first-unique-character-in-a-string/description/
+
+
 class Solution(object):
     def firstUniqChar(self, s):
         """
@@ -14,7 +16,7 @@ class Solution(object):
             else:
                 value = dict[x]
                 dict[x] = value + 1
-        list = [x for x,y in dict.items() if y == 1]
+        list = [x for x, y in dict.items() if y == 1]
         print(list)
         return min(s.index(x) for x in list) if len(list) != 0 else -1
 

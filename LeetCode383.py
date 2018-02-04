@@ -1,5 +1,6 @@
 # coding:utf-8
 
+
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
         """
@@ -15,9 +16,9 @@ class Solution(object):
             else:
                 magazine_list.remove(x)
         return True
-    
-    #　https://discuss.leetcode.com/topic/53864/java-o-n-solution-easy-to-understand 这是采用了hash的方法　
-    # 同时用数组代替了字典
+
+    # https://discuss.leetcode.com/topic/53864/java-o-n-solution-easy-to-understand
+    # 这是采用了hash的方法,同时用数组代替了字典
 
 if __name__ == "__main__":
-    Solution().canConstruct("aa","ab")
+    Solution().canConstruct("aa", "ab")
