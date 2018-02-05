@@ -13,4 +13,5 @@ class Solution(object):
             for x in range(0, 60):
                 if (bin(i)+bin(x)).count('1') == num:
                     list.append("{}:".format(i)+str(x).zfill(2))
+                    # "%d:%02d" % (i,x)
         return list
