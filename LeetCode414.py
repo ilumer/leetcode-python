@@ -1,5 +1,4 @@
 # coding: utf-8
-import sys
 
 
 class solution(object):
@@ -10,7 +9,7 @@ class solution(object):
         """
         if len(nums) < 3:
             return max(nums)
-        first, second, third = [-0x80000000] * 3
+        first, second, third = [-0xffffffff] * 3
         for x in nums:
             # 不能重复的数字
             if x not in [first, second, third]:
@@ -20,4 +19,4 @@ class solution(object):
                     third, second = second, x
                 elif x > third:
                     third = x
-        return third if third != -0x80000000 else first
+        return third if third != -0xffffffff else first
