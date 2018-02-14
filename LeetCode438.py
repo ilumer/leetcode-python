@@ -38,7 +38,8 @@ class Solution(object):
         """
         res = []
         n, m = len(s), len(p)
-        if n < m: return res
+        if n < m:
+            return res
         phash, shash = [0]*123, [0]*123
         for x in p:
             phash[ord(x)] += 1
@@ -51,3 +52,6 @@ class Solution(object):
             if shash == phash:
                 res.append(i - m + 1)
         return res
+
+    # https://www.geeksforgeeks.org/anagram-substring-search-search-permutations/ 
+    # 很好理解的窗口移动　新建的数组作为一个hashmap只要保证对应的hashcode的值相同即可
